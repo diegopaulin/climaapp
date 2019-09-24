@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"climaapp.weathermodels"}],"uuid":"d67c86d5e9cd4e77bea2453e64a733ba"}

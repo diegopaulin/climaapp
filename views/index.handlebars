@@ -1,0 +1,22 @@
+<div class="jumbotron text-center">
+    <h1 class="display-4">Bem vindo ao Consultas Climáticas!</h1>
+    <p class="lead">Consulte a condição climática de qualquer lugar do mundo.</p>
+    <hr class="my-4">
+    <form action="/search" method="POST">
+        <div class="text-center">
+            <p> Informe o nome da cidade e clique em pesquisar</p>
+
+            <input type="text" name="query" id="query" style="width: 18rem;">
+
+            <div>
+                <button type="submit" class="btn btn-primary btn-lg mt-3">Pesquisar</button>
+            </div>
+        </div>
+    </form>
+    <hr>
+
+
+    {{!-- <a href="/search" class="btn btn-primary btn-lg mt-3" role="button">Consultar</a> --}}
+
+
+</div>

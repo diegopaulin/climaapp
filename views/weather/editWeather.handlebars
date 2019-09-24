@@ -1,0 +1,19 @@
+<h1>Edição</h1>
+<hr>
+
+<h4>{{result._id}}</h4>
+<div class="card">
+    <div class="card-body">
+        <form action="/history/edit" method="post">
+            <input name="id" type="hidden" value="{{result._id}}">
+            <h4>Consulta registrada em: {{result.date}} para a cidade de {{result.city}} foi de {{result.temperature}}</h4>
+            <div class="container">
+                <img src={{result.result.current.weather_icons}}>
+            </div>
+            <label for="observation"></label>
+            <textarea name="observation" class="form-control" required>{{result.observation}}</textarea><br>
+            <hr>
+            <input type="submit" class="btn btn-success">
+        </form>
+    </div>
+</div>

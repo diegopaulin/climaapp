@@ -1,0 +1,43 @@
+{{#each errors}}
+<div class="alert alert-danger">{{text}}</div>
+{{else}}
+{{/each}}
+
+<h3>Confira agora a condição do tempo em {{result.location.name}}</h3>
+<hr>
+<form action="/weather/weatherResult/save" method="post">
+  <div class="album py-1 bg-light"></div>
+  <div class="container">
+    <div class="album py-1 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-5 shadow-sm">
+              <input type="hidden" name="imgUrl" value="{{result.current.weather_icons}}">
+              <img src={{result.current.weather_icons}} class="bd-placeholder-img card-img-top" width="100%" height="200">
+              <div class="card-body">
+                <label for="temperature">Temperatura:</label>
+                <input type="text" class="form-control" name="temperature" value="{{result.current.temperature}}"
+                  readonly>
+                <label for="city">Cidade: </label>
+                <input type="text" class="form-control" name="city" value="{{result.location.name}}" readonly>
+                <label for="date">Data Consulta: </label>
+                <input type="text" class="form-control" name="date" value="{{result.location.localtime}}" readonly>
+                <small>Observação:</small>
+                <textarea name="observation" class="form-control" cols="30" rows="3"></textarea>
+                <p class="card-text">{{observation}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button class="btn btn-success" type="submit">Registrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</form>
+
